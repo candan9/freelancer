@@ -1,0 +1,60 @@
+<%- include('partials/_header')-%> <%- include('partials/_navigation')-%>
+<section class="page-section m-5" id="contact">
+  <div class="container">
+    <div class="col-md-6 col-lg-4 mb-5">
+      <div class="portfolio-item mx-auto">
+        <div
+          class="
+            portfolio-item-caption
+            d-flex
+            align-items-center
+            justify-content-center
+            h-100
+            w-100
+          "
+        >
+          <div class="portfolio-item-caption-content text-center text-white">
+            <i class="fas fa-plus fa-3x"></i>
+          </div>
+        </div>
+        <img class="img-fluid" src="<%= project.image %>" alt="..." />
+        <h3 class="masthead-subheading text-center text-secondary">
+          <%= project.title %>
+        </h3>
+        <p class="masthead-subheading text-center text-secondary">
+          <%= project.description %>
+        </p>
+        <div class="col-xl-4 col-lg-5">
+          <!-- Share box -->
+          <div class="tm-bg-gray tm-share-box">
+            <div class="text-center">
+              <a
+                href="/projects/edit/<%= project._id %>"
+                class="
+                  btn btn-primary
+                  p-0
+                  mb-4
+                  tm-btn-animate tm-btn-download tm-icon-download
+                "
+                ><span>Update Details</span></a
+              >
+            </div>
+            <div class="text-center">
+              <a
+                href="/projects/<%= project._id %>?_method=DELETE"
+                class="
+                  btn btn-danger
+                  p-0
+                  tm-btn-animate tm-btn-download tm-icon-download
+                "
+                onclick="return confirm ('ARE YOU SURE')"
+                ><span>Delete Photo</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('partials/_footer')-%>
