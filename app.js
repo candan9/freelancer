@@ -9,14 +9,14 @@ const methodOverride = require('method-override');
 const fileUpload = require('express-fileupload');
 
 //Connect MONGODB
-/*mongoose.connect('mongodb+srv://candan:c7atKgdSUHFKXit6@cluster0.cmucd.mongodb.net/pcat-db?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost:27017/freelancerdb', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(()=>{
   console.log('DB CONNECTED!')
 }).catch((err)=>{
   console.log(err)
-})*/
+})
 
 //TEMPLATE ENGINE
 app.set('view engine', 'ejs');
@@ -34,11 +34,12 @@ app.use(
 
 //ROUT
 app.get('/', photoController.getAllPhotos);
-app.post('/photos', photoController.createPhoto);
+app.post('/photos', photoController.createPhoto);   
 app.get('/photos/:id', photoController.getPhoto);
 app.put('/photos/:id', photoController.updatePhoto);
 app.delete('/photos/:id', photoController.deletePhoto );
 app.get('/about', pageController.getAboutPage);
+app.get('/contact', pageController.getContactPage);
 app.get('/add', pageController.getAddPage);
 app.get('/photos/edit/:id', pageController.getEditPage);
 
@@ -47,5 +48,5 @@ app.get('/photos/edit/:id', pageController.getEditPage);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log("listenin port");
+    console.log("listening port");
 });
