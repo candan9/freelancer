@@ -1,6 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
-const photoController = require('./controllers/photoController')
+const projectController = require('./controllers/projectController')
 const pageController = require('./controllers/pageController')
 const app = express();
 
@@ -33,15 +33,15 @@ app.use(
 );
 
 //ROUT
-app.get('/', photoController.getAllPhotos);
-app.post('/photos', photoController.createPhoto);   
-app.get('/photos/:id', photoController.getPhoto);
-app.put('/photos/:id', photoController.updatePhoto);
-app.delete('/photos/:id', photoController.deletePhoto );
+app.get('/', projectController.getAllProjects);
+app.post('/projects', projectController.createProject);   
+app.get('/projects/:id', projectController.getProject);
+app.put('/projects/:id', projectController.updateProject);
+app.delete('/projects/:id', projectController.deleteProject );
 app.get('/about', pageController.getAboutPage);
 app.get('/contact', pageController.getContactPage);
 app.get('/add', pageController.getAddPage);
-app.get('/photos/edit/:id', pageController.getEditPage);
+app.get('/projects/edit/:id', pageController.getEditPage);
 
 
 

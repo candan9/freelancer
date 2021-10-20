@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //create photo schena
-const PhotoSchema = new Schema({
+const ProjectSchema = new Schema({
   title: String,
   description: String,
   image : String,
@@ -12,6 +12,6 @@ const PhotoSchema = new Schema({
   },
 });
 
-const Photo = mongoose.model('Photo', PhotoSchema);
+const Project = mongoose.model('Project', ProjectSchema);
 
-module.exports = Photo;
+module.exports = Project;

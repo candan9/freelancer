@@ -1,4 +1,4 @@
-const Photo = require('../models/Photo');
+const Project = require('../models/Project');
 
 exports.getAboutPage = (req, res) => {
   res.render('about');
@@ -13,8 +13,8 @@ exports.getContactPage = (req, res) => {
 };
 
 exports.getEditPage = async (req, res) => {
-  const photo = await Photo.findOne({ _id: req.params.id });
+  const project = await Project.findOne({ _id: req.params.id });
   res.render('edit', {
-    photo,
+    project,
   });
 };
