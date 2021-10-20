@@ -1,0 +1,21 @@
+{
+  "name": "freelancer",
+  "version": "1.0.0",
+  "description": "Freelancer platform",
+  "main": "app.js",
+  "scripts": {
+    "start":"nodemon start"
+  },
+  "keywords": [
+    "freelancer",
+    "job",
+    "work",
+    "positions",
+    "open",
+    "advert",
+    "job",
+    "advertisement"
+  ],
+  "author": "Emre CANDAN",
+  "license": "ISC"
+}
