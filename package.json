@@ -4,7 +4,7 @@
   "description": "Freelancer platform",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon start"
+    "start": "nodemon app.js"
   },
   "keywords": [
     "freelancer",
@@ -27,6 +27,7 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
     "method": "^2.0.0",
+    "method-override": "^3.0.0",
     "mongoose": "^6.0.11",
     "override": "^0.0.1"
   }
